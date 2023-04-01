@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+
+  todo-client:
+    build: ./todo-backend
+    image: todo-client
+    container_name: todo-client
+    restart: always
+    ports:
+      - 3000:80
+    depends_on:
+      - todo-backend
+
+  todo-backend:
+    build: ./todo-backend
+    image: todo-backend
+    container_name: todo-backend
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: todo-database
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: todo
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
