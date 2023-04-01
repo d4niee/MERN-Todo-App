@@ -1,0 +1,36 @@
+.card-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: #000000;
+    padding: 5px;
+}
+
+.td-desc {
+    text-align: start;
+}
+
+.actions {
+    text-align: end;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.delete-icon {}
+.delete-icon:hover {
+    color: #f56464;
+}
+.edit-icons {
+    margin-right: 10px;
+}
+.priority {
+    margin-left: 5px;
+}
+.trash-icon:hover {
+    color: #0a58ca;
+}
+.td-done {
+    width: 50px;
+}

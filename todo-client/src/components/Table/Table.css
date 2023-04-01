@@ -1,0 +1,23 @@
+.table-todo {
+    margin-top: 50px;
+    color: #676767;
+}
+
+.desc-heading {
+    text-align: start;
+}
+
+.action-heading {
+    text-align: end;
+}
+
+.priority-heading {
+    text-align: end;
+}
+
+.table-done {
+    margin-top: 30px;
+}
+.not-empty {
+    display: none;
+}

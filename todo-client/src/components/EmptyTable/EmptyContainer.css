@@ -1,0 +1,17 @@
+.empty-container {
+    padding: 50px;
+    color: #212121;
+}
+
+#emoji-neutral {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+}
+
+.add-new-container {
+    margin: 10px;
+}
+.btn-add-first {
+    margin-top: 10px;
+}

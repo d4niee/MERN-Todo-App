@@ -1,0 +1,27 @@
+[
+  {
+    "description": "Grocery Shopping",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "description": "Meal Prep",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "description": "30 Minutes Exercise",
+    "priority": "high",
+    "completed": true
+  },
+  {
+    "description": "Download Pictures from Camera",
+    "priority": "low",
+    "completed": false
+  },
+  {
+    "description": "Transfer money for savings",
+    "priority": "high",
+    "completed": true
+  }
+]

@@ -1,0 +1,21 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 90%;
+    background-color: #eeeeee;
+}
+
+.btn-nav {
+    margin-right: 20px;
+    max-width: 150px;
+}
+
+.btn-selected {
+    border-color: #0a58ca;
+    background-color: #0a58ca;
+}

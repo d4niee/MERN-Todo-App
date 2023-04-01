@@ -1,0 +1,49 @@
+### Get a List of all To Dos
+GET http://localhost:8080/todos
+
+### Add a new To Do
+POST http://localhost:8080/todos/add
+Content-Type: application/json
+Accept: application/json
+
+//language=JSON
+{
+  "description": "Gaming Tonight",
+  "priority": "low",
+  "completed": false
+}
+
+### Update an existing To Do
+POST http://localhost:8080/todos/update/64202252b445a2234c81c5af
+Content-Type: application/json
+Accept: application/json
+
+//language=JSON
+{
+  "description": "go to work edit",
+  "priority": "low",
+  "completed": true
+}
+
+### Delete an existing To do
+DELETE http://localhost:8080/todos/64201edec358013b7c1d73e9
+
+### Testing Register
+POST http://localhost:3001/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "password": "testpassword",
+  "email": "testuser@exampfrle.com"
+}
+
+### Testing Login
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "password": "testpasgttgsword",
+  "email": "testuser@exampfrle.com"
+}
