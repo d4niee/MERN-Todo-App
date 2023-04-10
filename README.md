@@ -1,5 +1,5 @@
 # MERN-Todo-App
-React.js Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap
+Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React
 
 <img src="screenshots/v1.3.0/TodoList.png">
 
