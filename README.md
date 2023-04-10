@@ -7,6 +7,8 @@ Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and
 
 ## Getting started
 
+This Application runs on all common platforms: macOS, Windows 10/11, Linux (tested on Ubuntu 22.04 LTS)
+
 You can either run this application by setting up your local MongoDB database, or you can run the Application
 with Docker Compose 
 
