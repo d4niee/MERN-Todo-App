@@ -61,3 +61,5 @@ Create a new Todo
 
 Edit an existing Todo
 <img src="screenshots/v1.3.0/UpdateTodo.png">
+
+If you find any errors or have any other suggestions for improvements i am happy about feedback! :)
