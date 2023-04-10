@@ -4,7 +4,11 @@
 
 starts the backend service
 
-### Links
+### ``yarn dev``
+
+starts the backend service in development mode
+
+### Useful Links
 
 dotenv: https://stackoverflow.com/questions/74131014/how-to-put-a-mongo-db-url-in-dotenv-file
 
