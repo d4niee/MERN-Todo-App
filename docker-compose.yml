@@ -7,9 +7,11 @@ services:
     container_name: todo-client
     restart: always
     ports:
-      - 3000:80
+      - "3000:80"
     depends_on:
       - todo-backend
+    networks:
+      - my-network
 
   todo-backend:
     build: ./todo-backend
@@ -17,17 +19,25 @@ services:
     container_name: todo-backend
     restart: always
     ports:
-      - 8080:8080
+      - "8080:8080"
     depends_on:
       - mongodb
+    networks:
+      - my-network
 
   mongodb:
     image: mongo:latest
     container_name: todo-database
     restart: always
     ports:
-      - 27017:27017
+      - "27017:27017"
     environment:
       MONGO_INITDB_DATABASE: todo
     volumes:
       - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge

@@ -6,7 +6,7 @@ import {User} from '../models/User';
  Base URL
  @type {string}
  */
-const LOGIN_API_BASE_URL = 'http://localhost:8080/users';
+const LOGIN_API_BASE_URL = 'http://todo-backend:8080/users';
 
 class LoginService {
     /**

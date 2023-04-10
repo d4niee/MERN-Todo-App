@@ -9,7 +9,7 @@ import {Todo} from '../models/Todo';
  * Base URL
  * @type {string}
  */
-const TODOS_API_BASE_URL = 'http://localhost:8080/todos/';
+const TODOS_API_BASE_URL = 'http://todo-backend:8080/todos/';
 
 class TodosService {
     /**
