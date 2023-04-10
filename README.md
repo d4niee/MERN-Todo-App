@@ -52,7 +52,6 @@ After the build process you can view the compose with ``docker-compose ps``. It 
 
 You can now open the Application with 
 <a href="http://localhost:3000">**http://localhost:3000**</a>
-<hr/>
 
 ## Other Screenshots
 
