@@ -1,19 +1,28 @@
-const User = require("../models/user.model");
-const express = require("express");
-const bcrypt = require('bcryptjs');
+import express, { Request, Response } from "express";
+import bcrypt from 'bcryptjs';
+import User, { IUser } from "../models/user.model";
 
 const userRoutes = express.Router();
 
-userRoutes.route('/login').post((request, response) => {
+/**
+ * Login an existing user by password and username
+ * query: POST localhost:8080/users/login/
+ * body:
+ * {
+ *     "username": "<username>"
+ *     "password": "<password>",
+ * }
+ */
+userRoutes.route('/login').post((request: Request, response: Response) => {
     const {username, password} = request.body;
-    User.findOne({username: username}, (err, user) => {
+    User.findOne({username: username}, (err: Error, user: IUser) => {
         if (user) {
             /**
              * check if the password is correct then
              * the login is successful
              */
-            bcrypt.hash(password, user.password, function (err, hash) {
-                if (hash === user.password) {
+            bcrypt.compare(password, user.password, function (err: Error, result: boolean) {
+                if (result) {
                     response.send({message: 'login success', user: user})
                 } else {
                     response.status(400).send({message: 'wrong credentials'})
@@ -25,9 +34,17 @@ userRoutes.route('/login').post((request, response) => {
     })
 })
 
-userRoutes.route('/register').post((request, response) => {
+/**
+ * Register a new User to the Database
+ * body:
+ * {
+ *     "username": "<username>"
+ *     "password": "<password>",
+ * }
+ */
+userRoutes.route('/register').post((request: Request, response: Response) => {
     const {username, password} = request.body;
-    User.findOne({username}, (err, user) => {
+    User.findOne({username}, (err: Error, user: IUser) => {
         /**
          * If the username or email is already designated in the database
          * abort creating a new user.
@@ -35,8 +52,8 @@ userRoutes.route('/register').post((request, response) => {
         if (user) {
             response.status(400).send({message: 'user already exists!'})
         } else {
-            bcrypt.genSalt(10, function (err, salt) {
-                bcrypt.hash(password, salt, function (err, hash) {
+            bcrypt.genSalt(10, function (err: Error, salt: string) {
+                bcrypt.hash(password, salt, function (err: Error, hash: string) {
                     const user = new User({
                         username: request.body.username,
                         password: hash,
@@ -52,4 +69,4 @@ userRoutes.route('/register').post((request, response) => {
     })
 })
 
-module.exports = userRoutes;
+export default userRoutes;

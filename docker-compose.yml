@@ -1,9 +1,8 @@
-version: "3"
+version: "3.5"
 
 services:
-
   todo-client:
-    build: ./todo-backend
+    build: ./todo-client
     image: todo-client
     container_name: todo-client
     restart: always

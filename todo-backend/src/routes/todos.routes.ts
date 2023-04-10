@@ -1,17 +1,19 @@
-const express = require("express");
-const Todo = require('../models/todo.model');
+import express, {Request, Response} from 'express';
+import TodoModel, {Todo} from '../models/todo.model';
+import {CallbackError} from "mongoose";
 
 const todoRoutes = express.Router();
 
 /**
  * Get all To-Dos for a user
- * query: GET localhost:8080/todos
+ * query: GET localhost:8080/todos/user/{id}
  */
-todoRoutes.route('/user/:userId').get((request, response) => {
-    Todo.find({userId: request.params.userId}, (err, todos) => {
-        if (err)
+todoRoutes.route('/user/:userId').get((request: Request, response: Response) => {
+    TodoModel.find({userId: request.params.userId}, (err: CallbackError, todos) => {
+        if (err) {
             console.log(err);
-        else {
+            response.json(err);
+        } else {
             response.json(todos);
         }
     });
@@ -22,9 +24,9 @@ todoRoutes.route('/user/:userId').get((request, response) => {
  * Get a To-Do with a specific ID
  * query: GET localhost:8080/todos/{id}
  */
-todoRoutes.route('/:id').get((request, response) => {
+todoRoutes.route('/:id').get((request: Request, response: Response) => {
     const id = request.params.id;
-    Todo.findById(id, (err, todo) => {
+    TodoModel.findById(id, (err: Error, todo: Todo) => {
         response.json(todo);
     });
 });
@@ -34,12 +36,13 @@ todoRoutes.route('/:id').get((request, response) => {
  * query: POST localhost:8080/todos/
  * body:
  * {
+ *     "userId": "<userid>"
  *     "description": "work",
- *     "todo_completed": false
+ *     "completed": false
  * }
  */
-todoRoutes.route('/add').post((request, response) => {
-    const todo = new Todo(request.body);
+todoRoutes.route('/add').post((request: Request, response: Response) => {
+    const todo = new TodoModel(request.body);
     todo.save()
         .then(todo => {
             console.log(`added new todo: ${todo}`)
@@ -56,8 +59,8 @@ todoRoutes.route('/add').post((request, response) => {
  * the completion status or the description
  * query: POST localhost:8080/todos/update/{id}
  */
-todoRoutes.route('/update/:id').post((request, response) => {
-    Todo.findById(request.params.id, (err, todo) => {
+todoRoutes.route('/update/:id').post((request: Request, response: Response) => {
+    TodoModel.findById(request.params.id, (err: Error, todo: any) => {
         if (!todo) {
             response.status(404).send(`Todo is not found!`)
         } else {
@@ -66,21 +69,21 @@ todoRoutes.route('/update/:id').post((request, response) => {
             todo.priority = request.body.priority;
             todo.save().then(() => {
                 response.status(200).json({'todo': 'todo updated successfully'});
-            }).catch(err => {
-                response.status(400).send("Cant update the Todo:", err)
+            }).catch((err: Error) => {
+                response.status(400).send(err);
             })
         }
     })
 })
 
 /**
- * Deleting a To-Do Entry
+ * Deleting a To-Do Entry by ID
  * query: DELETE localhost:8080/todos/{id}
  */
-todoRoutes.route('/:id').delete((request, response) => {
-    Todo.findByIdAndRemove(request.params.id)
+todoRoutes.route('/:id').delete((request: Request, response: Response) => {
+    TodoModel.findByIdAndRemove(request.params.id)
         .then((todo) => {
-            console.log(`removed todo with id <${todo.id}>`)
+            console.log(`removed todo with id <${todo?.id}>`)
             response.json('Todo deleted successfully');
         })
         .catch(err => {
@@ -89,4 +92,4 @@ todoRoutes.route('/:id').delete((request, response) => {
         });
 });
 
-module.exports = todoRoutes;
+export default todoRoutes;

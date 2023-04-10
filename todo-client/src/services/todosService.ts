@@ -1,21 +1,23 @@
 /**
  * This file contains all HTTP REST Methods
  */
-import axios from "axios";
+import axios from 'axios';
+import {AxiosResponse} from 'axios';
+import {Todo} from '../models/Todo';
 
 /**
  * Base URL
  * @type {string}
  */
-const TODOS_API_BASE_URL = 'http://localhost:3001/todos/'
+const TODOS_API_BASE_URL = 'http://localhost:8080/todos/';
 
 class TodosService {
     /**
      * returns a list of all Todos from a user
-     * @returns {Promise<axios.AxiosResponse<any>>}
+     * @returns {Promise<axios.AxiosResponse<Todo[]>>}
      */
-    async getTodosByUserId(userId) {
-        return await axios.get(TODOS_API_BASE_URL + '/user/' + userId)
+    async getTodosByUserId(userId: string): Promise<AxiosResponse<Todo[]>> {
+        return await axios.get(TODOS_API_BASE_URL + '/user/' + userId);
     }
 
     /**
@@ -23,17 +25,17 @@ class TodosService {
      * @param objectId the mongoDB Object ID
      * @returns {Promise<void>}
      */
-    async getTodoById(objectId) {
-        return await axios.get(TODOS_API_BASE_URL + objectId)
+    async getTodoById(objectId: string): Promise<AxiosResponse<Todo>> {
+        return await axios.get(TODOS_API_BASE_URL + objectId);
     }
 
     /**
      *
-     * @returns {Promise<axios.AxiosResponse<any>>}
+     * @returns {Promise<axios.AxiosResponse<Todo>>}
      * @param todo
      */
-    async addTodo(todo) {
-        console.log(todo)
+    async addTodo(todo: Todo): Promise<AxiosResponse<Todo>> {
+        console.log(todo);
         return await axios.post(TODOS_API_BASE_URL + 'add',
             {
                 userId: todo.userId,
@@ -42,16 +44,16 @@ class TodosService {
                 // default is always false
                 completed: todo.completed
             }
-        )
+        );
     }
 
     /**
      * update an existing To-Do
      * @param todo Object
      * @param objectId The ID of the To-Do
-     * @returns {Promise<axios.AxiosResponse<any>>}
+     * @returns {Promise<axios.AxiosResponse<Todo>>}
      */
-    async updateTodo(todo, objectId) {
+    async updateTodo(todo: Todo, objectId: string): Promise<AxiosResponse<Todo>> {
         return await axios.post(TODOS_API_BASE_URL + 'update/' + objectId,
             {
                 userId: todo.userId,
@@ -65,12 +67,12 @@ class TodosService {
     /**
      * Deletes a To-do by its ID
      * @param objectId
-     * @returns {Promise<axios.AxiosResponse<any>>}
+     * @returns {Promise<axios.AxiosResponse<Todo>>}
      */
-    async deleteTodoById(objectId) {
-        return await axios.delete(TODOS_API_BASE_URL + objectId)
+    async deleteTodoById(objectId: string): Promise<AxiosResponse<Todo>> {
+        return await axios.delete(TODOS_API_BASE_URL + objectId);
     }
 }
 
-const todoService = new TodosService()
+const todoService = new TodosService();
 export default todoService;

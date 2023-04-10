@@ -25,9 +25,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Links
 
-## Docker setup
-
-``docker build -t todo-client .``
-
-``docker run --rm -it -p 8080:80 todo-client``
 
