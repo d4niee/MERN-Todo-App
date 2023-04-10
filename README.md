@@ -8,7 +8,7 @@ Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and
 You can either run this application by setting up your local MongoDB database, or you can run the Application
 with Docker Compose 
 
-### Run Application Locally (not recommend / more difficulty)
+### Run Application Locally
 
 #### Step 1 - Setting up Database
 First you need to install MongoDB, I recommend also to install MongoDB Compass.
