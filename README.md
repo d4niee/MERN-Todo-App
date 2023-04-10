@@ -1,9 +1,13 @@
 # MERN-Todo-App 
-Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React
+Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React. The Application also uses password hashing and salting for the user accounts by using <a href="https://www.npmjs.com/package/bcryptjs">bcryptjs</a>. 
+
+⚠️ as this is only a demo Application, login data will not be saved. When reloading the browser you have to log in again. maybe in future releases this feature is also available.
 
 <img src="screenshots/v1.3.0/TodoList.png">
 
 ## Getting started
+
+ℹ️ This Application runs on all common platforms: macOS, Windows 10/11, Linux (tested on Ubuntu 22.04 LTS)
 
 You can either run this application by setting up your local MongoDB database, or you can run the Application
 with Docker Compose 
@@ -48,7 +52,6 @@ After the build process you can view the compose with ``docker-compose ps``. It 
 
 You can now open the Application with 
 <a href="http://localhost:3000">**http://localhost:3000**</a>
-<hr/>
 
 ## Other Screenshots
 
@@ -57,3 +60,13 @@ Create a new Todo
 
 Edit an existing Todo
 <img src="screenshots/v1.3.0/UpdateTodo.png">
+
+Login Page
+<img src="screenshots/v1.3.0/SignUp.png">
+
+Register Page
+<img src="screenshots/v1.3.0/SignIn.png">
+
+<hr/>
+
+If you find any errors or have any other suggestions for improvements i am happy about feedback! :)
