@@ -61,6 +61,12 @@ Create a new Todo
 Edit an existing Todo
 <img src="screenshots/v1.3.0/UpdateTodo.png">
 
+Login Page
+<img src="screenshots/v1.3.0/SignUp.png">
+
+Register Page
+<img src="screenshots/v1.3.0/SignIn.png">
+
 <hr/>
 
 If you find any errors or have any other suggestions for improvements i am happy about feedback! :)
