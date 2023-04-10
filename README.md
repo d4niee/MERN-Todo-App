@@ -1,4 +1,4 @@
-# MERN-Todo-App <img width=50px height=50px src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+# MERN-Todo-App <img width=50px height=50px src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"><img width=50px height=50px src="https://g.foolcdn.com/editorial/images/550536/mongodb_logo_fullcolorblack_rgb-4td3yuxzjs.png">
 Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React
 
 <img src="screenshots/v1.3.0/TodoList.png">
