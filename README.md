@@ -1,5 +1,7 @@
 # MERN-Todo-App 
-Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React. The Application also uses password hashing and salting for the user accounts by using <a href="https://www.npmjs.com/package/bcryptjs">bcryptjs</a>
+Todo List Application using MERN Stack (MongoDB, Express.js, React, Node.js) and bootstrap with Typescript React. The Application also uses password hashing and salting for the user accounts by using <a href="https://www.npmjs.com/package/bcryptjs">bcryptjs</a>. 
+
+⚠️ as this is only a demo Application, login data will not be saved. When reloading the browser you have to log in again. maybe in future releases this feature is also available.
 
 <img src="screenshots/v1.3.0/TodoList.png">
 
