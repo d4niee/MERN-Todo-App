@@ -34,6 +34,9 @@ First you need to install MongoDB, I recommend also to install MongoDB Compass.
 
 Now you are Ready to use the Application 🎉
 
+- <a href="https://github.com/d4niee/MERN-Todo-App/blob/main/todo-client/README.md">how to start the frontend</a>
+- <a href="https://github.com/d4niee/MERN-Todo-App/blob/main/todo-backend/README.md">how to start the backend</a>
+
 ### Run Application with Docker Compose (recommend)
 
 ⚠️ Make sure you have Docker installed and running on your Machine. <a href="https://docs.docker.com/desktop/">Here you can find an Installation Link</a>
