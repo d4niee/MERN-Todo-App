@@ -62,9 +62,11 @@ Edit an existing Todo
 <img src="screenshots/v1.3.0/UpdateTodo.png">
 
 Login Page
+
 <img src="screenshots/v1.3.0/loginPage.png">
 
 Register Page
+
 <img src="screenshots/v1.3.0/SignUp.png">
 
 <hr/>
