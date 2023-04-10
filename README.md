@@ -35,7 +35,7 @@ Now you are Ready to use the Application 🎉
 
 ⚠️ Make sure you have Docker installed and running on your Machine. <a href="https://docs.docker.com/desktop/">Here you can find an Installation Link</a>
 
-in the root directory of the project run ``docker compose -d --build`` and open 
+in the root directory of the project run ``docker-compose up -d --build`` and open 
 <a href="http://localhost:3000">**http://localhost:3000**</a>
 <hr/>
 
