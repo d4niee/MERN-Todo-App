@@ -5,8 +5,8 @@ React.js Todo List Application using MERN Stack (MongoDB, Express.js, React, Nod
 
 ## Getting started
 
-You can either run this application by setting up your local MongoDB database or you can just run the 
-with docker 
+You can either run this application by setting up your local MongoDB database, or you can run the Application
+with Docker Compose 
 
 ### Run Application Locally
 
