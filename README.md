@@ -49,5 +49,5 @@ Edit an existing Todo
 
 Login / Signup Page:
 
-<img width="49%" src="screenshots/v1.3.0/loginPage.png">
-<img width="49%" src="screenshots/v1.3.0/SignUp.png">
+<img width="20%" src="screenshots/v1.3.0/loginPage.png">
+<img width="20%" src="screenshots/v1.3.0/SignUp.png">
