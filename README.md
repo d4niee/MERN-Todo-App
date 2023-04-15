@@ -45,9 +45,16 @@ Now you are Ready to use the Application 🎉
 
 ⚠️ Make sure you have Docker installed and running on your Machine. <a href="https://docs.docker.com/desktop/">Here you can find an Installation Link</a>
 
-in the root directory of the project run ``docker-compose up -d --build``
+in the root directory of the project run 
+```shell
+docker-compose up -d --build
+```
 
-After the build process you can view the compose with ``docker-compose ps``. It should look similar to the following screenshot:
+After the build process you can view the compose with
+```shell
+docker-compose ps
+```
+It should look similar to the following screenshot:
 <img src="screenshots/dockerps.png">
 
 You can now open the Application with 
