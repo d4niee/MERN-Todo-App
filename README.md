@@ -32,7 +32,7 @@ First you need to install MongoDB, I recommend also to install MongoDB Compass.
 #### Step 3 - Setting up Frontend
 - run in the directory ``todo-client`` **yarn install**
 - edit ``/todo-client/services/loginService`` and ``/todo-client/services/todosService`` and replace 
-  the base url ``http://todo-backend:8080/users`` with ``http://localhost:8080/users``
+  the base url ``http://todo-backend:8080/`` with ``http://localhost:8080/``
 - after installing all dependencies you can run the frontend with ``yarn serve``
 - **(optional)** you can generate a production build of the Application with ``yarn build``
 
