@@ -53,7 +53,7 @@ After the build process you can view the compose with ``docker-compose ps``. It 
 You can now open the Application with 
 <a href="http://localhost:3000">**http://localhost:3000**</a>
 
-## Other Screenshots
+## Screenshots
 
 Create a new Todo
 <img src="screenshots/v1.3.0/newTodo.png">
